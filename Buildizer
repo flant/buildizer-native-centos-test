@@ -1,0 +1,18 @@
+build_type: native
+package_name: htop
+package_cloud: distorhead/htop
+
+os:
+  centos:
+    prepare:
+    - yum install -y desktop-file-utils
+  centos-centos6:
+    prepare:
+    - yum-builddep -y autoconf
+    - "cd /tmp && wget http://ftp.gnu.org/gnu/autoconf/autoconf-2.69.tar.gz &&
+       tar xf autoconf-2.69.tar.gz && cd autoconf-2.69 &&
+       ./configure && make && make install"
+
+target:
+- centos-centos7
+- centos-centos6
