@@ -5,7 +5,7 @@ Summary: Interactive process viewer
 Group: Applications/System
 License: GPL+
 URL: http://hisham.hm/htop/
-Source0: .
+Source0: package.tar.gz
 
 BuildRequires: desktop-file-utils
 BuildRequires: ncurses-devel
