@@ -12,7 +12,11 @@ os:
     - "cd /tmp && wget http://ftp.gnu.org/gnu/autoconf/autoconf-2.69.tar.gz &&
        tar xf autoconf-2.69.tar.gz && cd autoconf-2.69 &&
        ./configure && make && make install"
+  ubuntu:
+    build_dep: htop
 
 target:
 - centos-centos7
 - centos-centos6
+- ubuntu-14.04
+- ubuntu-12.04
