@@ -1,6 +1,6 @@
 Name: htop
 Version: 2.0.1
-Release: 3%{?dist}
+Release: 4%{?dist}
 Summary: Interactive process viewer
 Group: Applications/System
 License: GPL+
@@ -53,5 +53,8 @@ rm -rf $RPM_BUILD_ROOT%{_datadir}/applications/
 %{_mandir}/man1/htop.1*
 
 %changelog
+* Thu Mar 24 2016 Timofey Kirillov <timofey.kirillov@flant.com> - 2.0.1-4
+- Test release for buildizer
+
 * Fri Mar 18 2016 Timofey Kirillov <timofey.kirillov@flant.com> - 2.0.1-1
 - Test release for buildizer
