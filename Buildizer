@@ -1,6 +1,6 @@
 build_type: native
 package_name: htop
-package_cloud: distorhead/htop
+package_cloud: distorhead/main
 
 os:
   centos:
