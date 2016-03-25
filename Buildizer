@@ -15,7 +15,7 @@ os:
   ubuntu:
     build_dep: htop
     prepare:
-      - apt-get install -y automake2.11
+      - apt-get install -y automake1.11
 
 target:
 - centos-centos7
