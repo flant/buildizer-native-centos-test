@@ -15,7 +15,11 @@ os:
   ubuntu:
     build_dep: htop
     prepare:
-      - apt-get install -y automake1.11
+      - apt-get install -y wget
+      - apt-get autoremove --purge -y automake
+      - "cd /tmp && wget https://ftp.gnu.org/gnu/automake/automake-1.14.1.tar.gz &&
+         tar xf automake-1.14.1.tar.gz && cd automake-1.14.1 &&
+         ./configure && make && make install && ln -fs /usr/local/bin/automake-1.14 /usr/bin/automake"
 
 target:
 - centos-centos7
