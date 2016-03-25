@@ -5,14 +5,12 @@ package_cloud: distorhead/main
 os:
   centos:
     prepare:
+    - yum-builddep -y autoconf automake
     - yum install -y desktop-file-utils wget
     - yum remove -y automake
     - "cd /tmp && wget https://ftp.gnu.org/gnu/automake/automake-1.14.tar.gz &&
        tar xf automake-1.14.tar.gz && cd automake-1.14 &&
        ./configure && make && make install && ln -fs /usr/local/bin/automake-1.14 /usr/bin/automake"
-  centos-centos6:
-    prepare:
-    - yum-builddep -y autoconf
     - "cd /tmp && wget http://ftp.gnu.org/gnu/autoconf/autoconf-2.69.tar.gz &&
        tar xf autoconf-2.69.tar.gz && cd autoconf-2.69 &&
        ./configure && make && make install"
