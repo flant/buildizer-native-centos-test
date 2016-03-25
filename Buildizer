@@ -8,6 +8,7 @@ os:
     - yum-builddep -y autoconf automake
     - yum install -y desktop-file-utils wget
     - yum remove -y automake
+    - yum install -y intltool libtool
     - "cd /tmp && wget http://ftp.gnu.org/gnu/autoconf/autoconf-2.69.tar.gz &&
        tar xf autoconf-2.69.tar.gz && cd autoconf-2.69 &&
        ./configure && make && make install"
