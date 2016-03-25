@@ -14,6 +14,8 @@ os:
        ./configure && make && make install"
   ubuntu:
     build_dep: htop
+    prepare:
+      - apt-get install -y automake2.11
 
 target:
 - centos-centos7
