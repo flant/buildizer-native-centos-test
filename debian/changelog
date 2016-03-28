@@ -1,6 +1,12 @@
+htop (2.0.1-5) unstable; urgency=medium
+
+  * Release by buildizer.
+
+ -- Timofey Kirillov <distorhead@sd1>  Mon, 28 Mar 2016 21:55:29 +0300
+
 htop (2.0.1-4) unstable; urgency=medium
 
-  * Release by buildizer
+  * Release by buildizer.
 
  -- Timofey Kirillov <distorhead@sd1>  Thu, 24 Mar 2016 21:56:50 +0300
 

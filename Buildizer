@@ -1,5 +1,6 @@
 build_type: native
 package_name: htop
+package_version: 2.0.1-5
 package_cloud: distorhead/main
 
 os:
