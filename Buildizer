@@ -3,27 +3,27 @@ package_name: htop
 package_version: 2.0.1-5
 package_cloud: distorhead/main
 
-os:
-  centos:
-    prepare:
-    - yum-builddep -y autoconf automake
-    - yum install -y desktop-file-utils wget
-    - yum remove -y automake
-    - yum install -y intltool libtool
-    - "cd /tmp && wget http://ftp.gnu.org/gnu/autoconf/autoconf-2.69.tar.gz &&
-       tar xf autoconf-2.69.tar.gz && cd autoconf-2.69 &&
-       ./configure && make && make install"
-    - "cd /tmp && wget https://ftp.gnu.org/gnu/automake/automake-1.14.tar.gz &&
-       tar xf automake-1.14.tar.gz && cd automake-1.14 &&
-       ./configure && make && make install && ln -fs /usr/local/bin/automake-1.14 /usr/bin/automake"
-  ubuntu:
-    build_dep: htop
-    prepare:
-    - apt-get install -y wget
-    - apt-get autoremove --purge -y automake
-    - "cd /tmp && wget https://ftp.gnu.org/gnu/automake/automake-1.14.tar.gz &&
-       tar xf automake-1.14.tar.gz && cd automake-1.14 &&
-       ./configure && make && make install && ln -fs /usr/local/bin/automake-1.14 /usr/bin/automake"
+centos:
+  prepare:
+  - yum-builddep -y autoconf automake
+  - yum install -y desktop-file-utils wget
+  - yum remove -y automake
+  - yum install -y intltool libtool
+  - "cd /tmp && wget http://ftp.gnu.org/gnu/autoconf/autoconf-2.69.tar.gz &&
+     tar xf autoconf-2.69.tar.gz && cd autoconf-2.69 &&
+     ./configure && make && make install"
+  - "cd /tmp && wget https://ftp.gnu.org/gnu/automake/automake-1.14.tar.gz &&
+     tar xf automake-1.14.tar.gz && cd automake-1.14 &&
+     ./configure && make && make install && ln -fs /usr/local/bin/automake-1.14 /usr/bin/automake"
+
+ubuntu:
+  build_dep: htop
+  prepare:
+  - apt-get install -y wget
+  - apt-get autoremove --purge -y automake
+  - "cd /tmp && wget https://ftp.gnu.org/gnu/automake/automake-1.14.tar.gz &&
+     tar xf automake-1.14.tar.gz && cd automake-1.14 &&
+     ./configure && make && make install && ln -fs /usr/local/bin/automake-1.14 /usr/bin/automake"
 
 target:
 - centos-centos7
