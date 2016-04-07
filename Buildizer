@@ -1,6 +1,6 @@
 build_type: native
 package_name: htop
-package_version: 2.0.1-5
+package_version: 2.0.1-6
 package_cloud: distorhead/main
 
 centos:
@@ -26,7 +26,7 @@ ubuntu:
      ./configure && make && make install && ln -fs /usr/local/bin/automake-1.14 /usr/bin/automake"
 
 target:
-- centos-centos7
-- centos-centos6
-- ubuntu-14.04
-- ubuntu-12.04
+- centos/centos7
+- centos/centos6
+- ubuntu/14.04
+- ubuntu/12.04
